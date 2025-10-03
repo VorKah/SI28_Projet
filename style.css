@@ -25,6 +25,17 @@ body {
   font-family: Rubik, system-ui, Arial, sans-serif;
 }
 
+a {
+  text-decoration: none; /* enlève le soulignement */
+  color: var(--accent); 
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+
 /* NAVIGATION */
 .nav {
   position: sticky;
@@ -206,7 +217,6 @@ body {
   max-height: 200px;   
   overflow-y: auto;    /* ajoute la barre de défilement verticale */
 }
-
 
 .box.scroll-down::-webkit-scrollbar {
   width: 6px;

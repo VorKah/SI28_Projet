@@ -13,6 +13,9 @@ const generateQuote = function() {
 		quote: "La fille de L’Exorciste avait seulement 14 ans pendant le tournage.",
 	},
 	{
+		quote: "Arrête tout de suite.",
+	},
+	{
 		quote: "Dans Shining (1980), Jack Nicholson a improvisé la phrase culte « Here’s Johnny! ».",
 	},
 	{
@@ -29,6 +32,9 @@ const generateQuote = function() {
 	},
 	{
 		quote: "Paranormal Activity (2007) a coûté seulement 15 000 $ et a rapporté plus de 190 millions.",
+	},
+	{
+		quote: "Passe ton chemin ou tu le regretteras.",
 	},
 	{
 		quote: "Dans Alien (1979), la scène du chestburster a surpris les acteurs pour de vrai.",
@@ -50,6 +56,9 @@ const generateQuote = function() {
 	},
 	{
 		quote: "Dans L’Exorciste, on utilisait de la soupe aux pois pour représenter le vomi vert.",
+	},
+	{
+		quote: "Arrête tout de suite",
 	},
 	{
 		quote: "La poupée Annabelle existe vraiment et se trouve dans un musée aux États-Unis.",

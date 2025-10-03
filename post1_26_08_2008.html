@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YourSpace</title>
+    <!-- Polices Google  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Rubik:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="brand">YourSpace</div>
+      <nav class="links">
+        <a href="index.html">Accueil</a>
+        <a href="#">A propos</a>
+        <a href="#">Indices</a>
+      </nav>
+      <div class="links">
+        <a href="#">Se connecter</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- Colonne gauche : boîtes pour intérêts / liens -->
+      <aside class="sidebar left">
+        <div class="box scroll-down">
+          <h4>Intérêts</h4>
+          <div class="slot"><small>Ecriture</small></div>
+          <div class="slot"><small>Lecture</small></div>
+          <div class="slot"><small>Films d'horreur 👻</small></div>
+          <div class="slot"><small>Lecture</small></div>
+          <div class="slot"><small>Britney Spears 4ever!</small></div>
+          <div class="slot"><small>Guitar Hero</small></div>
+          <div class="slot"><small>Nature</small></div>
+        </div>
+
+        <div class="box scroll-down">
+          <h4>Anciens posts</h4>
+          <div class="slot">
+            <a href="post1_26_08_2008.html"
+              ><small>Post du 26/08/2008</small></a
+            >
+          </div>
+          <!--car on commence avec le fait que tout va bien-->
+          <div class="slot">
+            <a href="#"><small>Post</small></a>
+          </div>
+          <div class="slot">
+            <a href="#"><small>Post</small></a>
+          </div>
+          <div class="slot">
+            <a href="#"><small>Post</small></a>
+          </div>
+          <div class="slot">
+            <a href="#"><small>Post</small></a>
+          </div>
+          <div class="slot">
+            <a href="#"><small>Post</small></a>
+          </div>
+          <div class="slot">
+            <a href="#"><small>Post le plus récent</small></a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Contenu principal : faux articles -->
+      <section class="content">
+        <article class="post">
+          <h2>Mes premiers pas à l'UTC</h2>
+          <div class="meta">Par mel_ancolique - mardi 26 août 2008</div>
+          <p class="excerpt">
+            Merci pour tous ceux qui se sont inquiétés de mon absence de post
+            ces derniers mois, j’ai dû vraiment me concentrer sur mes révisions
+            du bac, et après ça je n’ai plus eu aucun réseau Internet (pour ceux
+            que ça intéresse j’ai posté un diaporama de mes vacances sur ma
+            chaîne YouTube)!
+          </p>
+          <p class="excerpt">
+            En tout cas j’ai le plaisir de vous annoncer que j’ai obtenu mon bac
+            mention assez bien! Et surtout que j’ai réussi à intégrer une
+            magnifique école d’ingénieurs : l’Université de Technologie de
+            Compiègne (UTC pour les connaisseurs)! Enfin voilà je suis juste
+            trop contente! Pour célébrer ce nouveau chapitre de ma vie j’ai
+            décidé d’archiver tous mes anciens posts, alors c’est normal que
+            vous ne puissiez plus les voir.
+          </p>
+          <p class="excerpt">
+            Je viens de m’installer dans mon appart étudiant, il n’est pas très
+            grand mais je saurai en faire mon petit cocon pour les 5 années à
+            venir ! Hâte de découvrir l’école, les cours mais aussi
+            l’intégration, on m’a dit qu’il n’y avait pas trop de bizutage ici
+            mais je me méfie toujours :3
+          </p>
+        </article>
+        <div class="comments">
+          <button class="toggle-comments" onclick="toggleComments(this)">
+            Afficher les commentaires
+          </button>
+          <div class="comment-list" style="display: none;">
+            <br />
+            <div class="comment">
+              <p class="author">👤 fanny-phoenix - <small>26/08/2008</small></p>
+              <p class="text">Oh génial des nouvelles je commençais à m’inquiéter! Bravo pour ton bac Mel ;)</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 xX-anaïs-Xx - <small>26/08/2008</small></p>
+              <p class="text">A quand les nouvelles recommandations de livres?</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 cecile0h - <small>27/08/2008</small></p>
+              <p class="text">Je viens de voir le diapo, mais elles avaient l’air géniales tes vacances ! J’espère que maintenant qu’elles sont passées tu vas recommencer à publier régulièrement ><</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 xX-anaïs-Xx - <small>27/08/2008</small></p>
+              <p class="text">A quand les nouvelles recommandations de livres?</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 jade0303 - <small>28/08/2008</small></p>
+              <p class="text">J’adore!</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 marine.bleu - <small>29/08/2008</small></p>
+              <p class="text">Dommage que tu aies supprimé tes anciennes entrées ! Mais je comprends c'est que des histoires de lycée…</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 NuitVerte - <small>26-9/08/2008</small></p>
+              <p class="text">Aloooors l’integ ça se passe comment ?</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 FatalError92 - <small>30/08/2008</small></p>
+              <p class="text">J’espère que c’est pas parce qu’ils l’ont traumatisée par le bizutage à leur école… Je viendrais m’occuper d’eux moi-même !</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 PizzaMystique - <small>30/08/2008</small></p>
+              <p class="text">Tu nous as pas encore donné de nouvelles de ton integ!</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 Ritournelle98 - <small>12/11/2025</small></p>
+              <p class="text">Coucou à tous ceux qui lisent ça en 2025 (ou après) ! Je sais pas si vous avez vu mais le lien vers la vidéo ne fonctionne plus donc si ça vous intéresse de la voir je l’ai republiée.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colonne droite : boîtes pour liens vers autres posts, archives -->
+      <aside class="sidebar right">
+        <div class="box facts-box">
+          <h4>Faits random sur les films d'horreur</h4>
+          <p id="quotes"></p>
+          <button onclick="newQuote()">autre fait</button>
+        </div>
+        <div class="box">
+          <h4>Contact</h4>
+          <p class="muted">METTRE ICI LA UNE FAUSSE ADRESSE MAIL.</p>
+        </div>
+      </aside>
+    </main>
+
+    <script src="facts.js"></script>
+  </body>
+</html>
