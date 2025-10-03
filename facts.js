@@ -100,6 +100,7 @@ function newQuote() {
 	document.getElementById("generate").addEventListener('click', generateQuote);
 }
 
+//Affiche les commentaires
 function toggleComments(button) {
   const list = button.nextElementSibling;
   if (list.style.display === "none") {
@@ -108,5 +109,15 @@ function toggleComments(button) {
   } else {
     list.style.display = "none";
     button.textContent = "Afficher les commentaires";
+  }
+}
+
+//lance/arrête la musique avec le clic de l'image
+function toggleMusique() {
+  const audio = document.getElementById('musique');
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
   }
 }

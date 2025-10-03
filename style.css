@@ -322,3 +322,17 @@ button:active {
   color: #0b0b0f;
 }
 
+/*MUSIQUE*/
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clickable-img {
+  cursor: pointer;
+  width: 180px;
+  max-width: 75%;
+  height: auto;
+  cursor: pointer;
+}
