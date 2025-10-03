@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YourSpace</title>
+    <!-- Polices Google  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Rubik:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="brand">YourSpace</div>
+      <nav class="links">
+        <a href="index.html">Accueil</a>
+        <a href="#">A propos</a>
+        <a href="#">Indices</a>
+      </nav>
+      <div class="links">
+        <a href="#">Se connecter</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- Colonne gauche : boîtes pour intérêts / liens -->
+      <aside class="sidebar left">
+        <div class="box scroll-down">
+          <h4>Intérêts</h4>
+          <div class="slot"><small>Ecriture</small></div>
+          <div class="slot"><small>Lecture</small></div>
+          <div class="slot"><small>Films d'horreur 👻</small></div>
+          <div class="slot"><small>Lecture</small></div>
+          <div class="slot"><small>Britney Spears 4ever!</small></div>
+          <div class="slot"><small>Guitar Hero</small></div>
+          <div class="slot"><small>Nature</small></div>
+        </div>
+
+        <div class="box scroll-down">
+          <h4>Anciens posts</h4>
+          <div class="slot">
+            <a href="#"><small>Post le plus ancien</small></a>
+          </div>
+          <!--car on commence avec le fait que tout va bien-->
+          <div class="slot">
+            <a href="#"><small>Post</small></a>
+          </div>
+          <div class="slot">
+            <a href="#"><small>Post</small></a>
+          </div>
+          <div class="slot">
+            <a href="#"><small>Post</small></a>
+          </div>
+          <div class="slot">
+            <a href="#"><small>Post</small></a>
+          </div>
+          <div class="slot">
+            <a href="#"><small>Post</small></a>
+          </div>
+          <div class="slot">
+            <a href="#"><small>Post le plus récent</small></a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Contenu principal : faux articles -->
+      <section class="content">
+        <article class="post">
+          <h2>Introduction</h2>
+          <div class="meta">Par mel_ancolique - vendredi 02 février 2006</div>
+          <p class="excerpt">Salut salut salut!</p>
+          <p class="excerpt">
+            Bienvenue sur mon nouveau compte YourSpace! Je m'appelle Mélanie
+            (mais tout le monde m'appelle Mel) et je suis au lycée! J'ai trop
+            hâte de partager mes aventures avec vous, ça va être super top :3
+          </p>
+          <p class="excerpt">
+            Comme j'ai indiqué à gauche, j'aime trop les livres, les Spices
+            Girls (elles sont trop swag) et les films d'horreur! Je vais essayer
+            d'être régulière sur ce blog.
+          </p>
+          <br />
+          <br />
+          <p class="excerpt"><i>Edit: Dimanche 24 août 2008</i></p>
+          <p class="excerpt">
+            Je suis trop dégoutée :( j'ai oublié d'archiver mes posts YourSpace
+            et tout à disparu...
+          </p>
+        </article>
+        <div class="comments">
+          <button class="toggle-comments" onclick="toggleComments(this)">
+            Afficher les commentaires
+          </button>
+          <div class="comment-list" style="display: none;">
+            <br>
+            <div class="comment">
+              <p class="author">👤 camille-92</p>
+              <p class="text">Wow, j'adore ton blog, continue comme ça !</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 misschocolat</p>
+              <p class="text">Un nouveau blog youpiiiiiiiii!</p>
+            </div>
+            <div class="comment">
+              <p class="author">👤 rose-nocturne</p>
+              <p class="text">Oh non c'est trop dommage pour tes anciens posts >.< Au moins c'est un nouveau départ!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colonne droite : boîtes pour liens vers autres posts, archives -->
+      <aside class="sidebar right">
+        <div class="box facts-box">
+          <h4>Faits random sur les films d'horreur</h4>
+          <p id="quotes"></p>
+          <button onclick="newQuote()">autre fait</button>
+        </div>
+        <div class="box">
+          <h4>Contact</h4>
+          <p class="muted">METTRE ICI LA UNE FAUSSE ADRESSE MAIL.</p>
+        </div>
+      </aside>
+    </main>
+
+    <script src="facts.js"></script>
+  </body>
+</html>
