@@ -43,9 +43,6 @@ const generateQuote = function() {
 		quote: "Les cris de Shelley Duvall dans Shining ont nécessité plus de 100 prises.",
 	},
 	{
-		quote: "horseshoe crabs have survived 450 million years without major changes.",
-	},
-	{
 		quote: "Freddy Krueger est inspiré d’un voisin étrange que Wes Craven avait dans son enfance.",
 	},
 	{
