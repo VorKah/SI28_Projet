@@ -118,3 +118,20 @@ function toggleMusique() {
     audio.pause();
   }
 }
+
+function unlockAudio() {
+  const input = document.getElementById("audioPassword");
+  const audioBox = document.querySelector(".audio-protected");
+  const audio = document.getElementById("recording");
+
+  if (input.value === "Gribouille") { 
+    audioBox.classList.add("unlocked");
+    audio.removeAttribute("disabled");
+    audioBox.querySelector(".locked-text").textContent = "Enregistrement déverrouillé";
+  } else {
+    audioBox.querySelector(".locked-text").textContent = "Mot de passe incorrect";
+    setTimeout(() => {
+      audioBox.querySelector(".locked-text").textContent = "Enregistrement protégé";
+    }, 2000);
+  }
+}
