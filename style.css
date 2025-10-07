@@ -533,3 +533,76 @@ video:hover {
 .lock-box button:hover {
   background: #b88bff;
 }
+
+/* --- COMMENTAIRES SUPPRIMÉS --- */
+.comment.deleted {
+  position: relative;
+  background: rgba(255, 50, 50, 0.05);
+  border: 1px solid rgba(255, 50, 50, 0.2);
+  color: #ff4d4d;
+  font-style: italic;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.comment.deleted .text {
+  color: #ff6b6b;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 4px rgba(255, 0, 0, 0.2);
+}
+
+/* Glitch subtil au survol */
+.comment.deleted:hover {
+  background: rgba(255, 50, 50, 0.08);
+  border-color: rgba(255, 80, 80, 0.3);
+  animation: soft-glitch 0.4s steps(2, end) infinite;
+}
+
+/* Faux duplicata glitch */
+.comment.deleted::before,
+.comment.deleted::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: inherit;
+  opacity: 0;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+}
+
+/* Calque de distorsion gris */
+.comment.deleted:hover::before {
+  opacity: 0.3;
+  left: -1px;
+  clip: rect(4px, 9999px, 14px, 0);
+  animation: soft-glitch-shift 0.25s infinite linear alternate;
+}
+
+/* Calque de distorsion blanche */
+.comment.deleted:hover::after {
+  opacity: 0.25;
+  left: 1px;
+  clip: rect(10px, 9999px, 22px, 0);
+  animation: soft-glitch-shift 0.3s infinite linear alternate-reverse;
+}
+
+/* Animation du tremblement / glitch léger */
+@keyframes soft-glitch {
+  0% { transform: none; }
+  20% { transform: translateX(-1px) skewX(0.5deg); }
+  40% { transform: translateX(1px) skewX(-0.5deg); }
+  60% { transform: translateX(-1px) skewX(0.3deg); }
+  80% { transform: translateX(1px) skewX(-0.3deg); }
+  100% { transform: none; }
+}
+
+@keyframes soft-glitch-shift {
+  0% { clip: rect(2px, 9999px, 6px, 0); }
+  25% { clip: rect(10px, 9999px, 20px, 0); }
+  50% { clip: rect(4px, 9999px, 14px, 0); }
+  75% { clip: rect(12px, 9999px, 18px, 0); }
+  100% { clip: rect(0, 9999px, 6px, 0); }
+}
