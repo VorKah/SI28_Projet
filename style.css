@@ -651,3 +651,60 @@ video:hover {
 body.shake {
   animation: screen-glitch 0.3s linear 4;
 }
+
+/* Animation de suppression glitch */
+.comment.glitching {
+  position: relative;
+  animation: comment-glitch 1.8s ease forwards;
+  overflow: hidden;
+}
+
+@keyframes comment-glitch {
+  0% {
+    filter: none;
+    opacity: 1;
+  }
+  20% {
+    transform: skew(2deg);
+    filter: contrast(2) brightness(1.5);
+  }
+  40% {
+    transform: translate(2px, -1px);
+    clip-path: inset(0 0 60% 0);
+  }
+  60% {
+    transform: translate(-3px, 2px);
+    clip-path: inset(30% 0 0 0);
+    filter: blur(2px);
+  }
+  80% {
+    opacity: 0.4;
+    clip-path: inset(50% 0 20% 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.98);
+    filter: blur(5px);
+  }
+}
+
+/* Style du commentaire supprimé (tu peux déjà avoir ça, sinon garde-le ici) */
+.comment.deleted {
+  color: #ff4d4d;
+  font-style: italic;
+  border: 1px dashed rgba(255, 80, 80, 0.3);
+  background: rgba(50, 0, 0, 0.1);
+  animation: deleted-glitch 1s infinite alternate ease-in-out;
+}
+
+@keyframes deleted-glitch {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 1px 0 rgba(255, 0, 0, 0.6), -1px 0 rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    text-shadow: -1px 0 rgba(255, 0, 0, 0.6), 1px 0 rgba(255, 255, 255, 0.4);
+  }
+}

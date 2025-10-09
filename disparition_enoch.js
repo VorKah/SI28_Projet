@@ -1,29 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // On cible tous les boutons "Afficher les commentaires"
   const buttons = document.querySelectorAll(".toggle-comments");
 
   buttons.forEach(button => {
     button.addEventListener("click", () => {
       const list = button.nextElementSibling;
 
-      // Quand les commentaires s’ouvrent
+      // Quand les commentaires s’affichent
       if (list && list.style.display === "block") {
-        const word = list.querySelector(".vanishing-word");
-        if (!word) return;
+        const targetComment = list.querySelector(".comment:not(.deleted)");
 
-        // Déclenche le glitch après 4 secondes
-        setTimeout(() => {
-          word.classList.add("glitch");
-          document.body.classList.add("shake");
-
+        if (targetComment && targetComment.querySelector(".vanishing-word")) {
           setTimeout(() => {
-            document.body.classList.remove("shake");
-          }, 1500);
+            // Lance le glitch
+            targetComment.classList.add("glitching");
 
-          setTimeout(() => {
-            console.log("🜂 Vous n’auriez pas dû voir ça.");
-          }, 1600);
-        }, 3000);
+            // Puis efface le commentaire et le remplace
+            setTimeout(() => {
+              targetComment.outerHTML = `
+                <div class="comment deleted" data-text="Commentaire supprimé par l’administrateur">
+                  <p class="text">Commentaire supprimé par l’administrateur</p>
+                </div>
+              `;
+              console.log("🜂 Le message a été supprimé.");
+            }, 1800); // durée du glitch avant suppression
+          }, 4000); // délai après affichage
+        }
       }
     });
   });
