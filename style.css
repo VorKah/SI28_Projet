@@ -136,6 +136,11 @@ a:hover {
   font-size: 14px;
 }
 
+.box.scroll-down.anciens-posts {
+  max-height: 400px; /* tu peux ajuster à 400px si tu veux encore plus grand */
+  overflow-y: auto;
+}
+
 /* POSTS */
 .content {
   display: flex;
@@ -707,4 +712,16 @@ body.shake {
   100% {
     text-shadow: -1px 0 rgba(255, 0, 0, 0.6), 1px 0 rgba(255, 255, 255, 0.4);
   }
+}
+
+.sidebar .slot a.active {
+  color: var(--accent); /* violet */
+  font-weight: bold;
+  text-shadow: 0 0 8px var(--glow);
+  border-radius: 5px;
+  background-color: rgba(184, 139, 255, 0.3);
+  backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+border: 1px solid rgba(184, 139, 255, 0.4); /* optionnel : bord légèrement visible */
+  padding: 5px;
 }

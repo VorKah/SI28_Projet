@@ -135,3 +135,22 @@ function unlockAudio() {
     }, 2000);
   }
 }
+
+//garde la position de la dropbox en mémoire pour ne pas avoir à tout scroller dans les anciens posts
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebar = document.querySelector(".anciens-posts");
+  const savedScroll = localStorage.getItem("sidebarScroll");
+
+  // Restaure la position du scroll si elle existe
+  if (savedScroll && sidebar) {
+    sidebar.scrollTop = parseInt(savedScroll, 10);
+  }
+
+  // Sauvegarde la position quand on quitte la page
+  window.addEventListener("beforeunload", () => {
+    if (sidebar) {
+      localStorage.setItem("sidebarScroll", sidebar.scrollTop);
+    }
+  });
+});
+
