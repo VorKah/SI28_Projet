@@ -721,7 +721,46 @@ body.shake {
   border-radius: 5px;
   background-color: rgba(184, 139, 255, 0.3);
   backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
-border: 1px solid rgba(184, 139, 255, 0.4); /* optionnel : bord légèrement visible */
+  -webkit-backdrop-filter: blur(10px); /* compatibilité Safari */
+  border: 1px solid rgba(184, 139, 255, 0.4); /* optionnel : bord légèrement visible */
   padding: 5px;
+}
+
+/* --- PAGE "NON DISPONIBLE" / SIMPLE CENTRAGE --- */
+body:has(#inscription-titre) .wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: calc(100vh - 80px);
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-width: 700px;
+}
+
+
+#inscription-titre {
+  font-family: Cinzel, serif;
+  font-size: 1.8rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(156, 108, 255, 0.4);
+  margin-bottom: 0.8rem;
+}
+
+#inscription-text {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Effet subtil de pulsation du titre */
+#inscription-titre {
+  animation: fadePulse 4s ease-in-out infinite;
+}
+
+@keyframes fadePulse {
+  0%, 100% { opacity: 1; text-shadow: 0 0 6px rgba(156, 108, 255, 0.4); }
+  50% { opacity: 0.8; text-shadow: 0 0 14px rgba(156, 108, 255, 0.6); }
 }
